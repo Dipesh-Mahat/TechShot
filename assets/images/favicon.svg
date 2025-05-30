@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <style>
+    .icon { fill: #0070f3; }
+  </style>
+  
+  <!-- Tech Icon -->
+  <circle class="icon" cx="16" cy="16" r="15" opacity="0.9"/>
+  
+  <!-- Circuit Lines -->
+  <path class="icon" d="M8,16 L24,16" stroke="#ffffff" stroke-width="2"/>
+  <path class="icon" d="M16,8 L16,24" stroke="#ffffff" stroke-width="2"/>
+  <path class="icon" d="M8,8 L24,24" stroke="#ffffff" stroke-width="2"/>
+  <path class="icon" d="M24,8 L8,24" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Letters T T -->
+  <text x="9" y="22" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">T</text>
+  <text x="16" y="22" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">D</text>
+</svg>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Beam: The Next Evolution in Search Technology - TechTrend Digest</title>
+  <meta name="description" content="Google's new AI-powered search experience aims to revolutionize how we find and interact with information online.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/images/favicon.ico">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Side Banner Ads (hidden initially, shown after scroll) -->
+  <div id="ad-side-left" class="ad-side-banner" style="display:none;">
+    <div class="ad-placeholder-content">
+      <p class="ad-text">Advertisement</p>
+      <div class="ad-mockup">
+        <div style="width: 160px; height: 600px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc;">
+          <span style="color: #999;">160x600 Side Ad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="ad-side-right" class="ad-side-banner" style="display:none;">
+    <div class="ad-placeholder-content">
+      <p class="ad-text">Advertisement</p>
+      <div class="ad-mockup">
+        <div style="width: 160px; height: 600px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc;">
+          <span style="color: #999;">160x600 Side Ad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="../index.html">
+          <h1>Tech<span>Trend</span> Digest</h1>
+        </a>
+      </div>
+      
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+        <nav>
+        <ul class="nav-menu" data-nav-x="mn-43p">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#ai-breakthroughs">AI Breakthroughs</a></li>
+          <li><a href="../index.html#tech-news">Tech News</a></li>
+          <li><a href="../index.html#software-tips">Software Tips</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Banner Ad -->
+  <div class="container">
+    <div class="ad-banner">
+      <p class="ad-text">Advertisement</p>
+      <!-- Include ad banner from ad-scripts.html -->
+      <script>
+        fetch('../ads/ad-scripts.html')
+          .then(response => response.text())
+          .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const bannerAd = doc.getElementById('banner-ad');
+            document.querySelector('.ad-banner').appendChild(bannerAd);
+          });
+      </script>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="container main-content">
+    <!-- Article Content -->
+    <article class="articles-section">
+      <header class="article-header">
+        <span class="article-category">AI Breakthroughs</span>
+        <h1>Google Beam: The Next Evolution in Search Technology</h1>
+        <div class="article-meta">
+          <span><i class="fas fa-user"></i> Mark Johnson</span>
+          <span><i class="fas fa-calendar"></i> May 20, 2025</span>
+          <span><i class="fas fa-clock"></i> 8 min read</span>
+          <span><i class="fas fa-comments"></i> 18 comments</span>
+        </div>
+      </header>
+      
+      <div class="article-featured-image">
+        <img src="https://placehold.co/1200x600/f7f0ff/5b3b8c?text=Google+Beam" alt="Google Beam">
+        <p class="image-caption">Google Beam represents the company's most significant search overhaul in years.</p>
+      </div>
+      
+      <div class="article-body">
+        <p>In a move that signals a significant shift in how we interact with the world's information, Google has unveiled Beam, its next-generation search experience powered by advanced AI technology. This new offering represents the most dramatic overhaul of Google's core search product in years and marks a clear response to the growing influence of AI-driven information retrieval systems.</p>
+        
+        <p>At a packed developer conference in Mountain View, Google executives showcased how Beam fundamentally reimagines the search experience, moving beyond the traditional list of blue links to provide more direct, contextually rich answers to complex queries.</p>
+        
+        <h2>Beyond the Blue Links: A New Search Paradigm</h2>
+        
+        <p>Google Beam introduces a dramatically different interface from the familiar search results page we've known for over two decades. Instead of the traditional list of websites with brief descriptions, Beam presents information in dynamic, interactive panels that adapt based on your query and subsequent questions.</p>
+        
+        <p>"We're moving from a world where you search for information to one where information finds you," explained Sarah Chen, Google's VP of Search Experience. "Beam understands not just your query, but the context behind it, your likely intent, and anticipates what you might want to know next."</p>
+        
+        <p>The most immediately noticeable change is the conversation-like interaction model. Users can ask follow-up questions naturally, with Beam maintaining context throughout the conversation. For example, if you ask about "best national parks for hiking," then follow up with "which ones are good for families," Beam understands you're still talking about national parks and adjusts its responses accordingly.</p>
+        
+        <blockquote>
+          Beam represents the biggest shift in how people interact with information since the introduction of the search engine itself. It's not just an evolution of search—it's a fundamentally new way to access and make sense of the world's knowledge.
+          <cite>— Sundar Pichai, Google CEO</cite>
+        </blockquote>
+        
+        <h2>The Technology Behind Beam</h2>
+        
+        <p>At the heart of Google Beam lies a collection of sophisticated AI models trained on vast datasets of text, images, and structured data. While Google has been incorporating AI into search for years through various initiatives, Beam represents a quantum leap in capability and implementation.</p>
+        
+        <p>The system is powered by Pathfinder, Google's latest large language model (LLM) that builds on the foundation established by previous models but with several key advancements:</p>
+        
+        <ul>
+          <li><strong>Multimodal processing:</strong> Pathfinder can analyze and reason across text, images, videos, and structured data simultaneously.</li>
+          <li><strong>Grounded reasoning:</strong> The model has been designed to provide citations and clearly indicate the sources of its information.</li>
+          <li><strong>Real-time integration:</strong> Unlike earlier AI systems, Beam can access up-to-date information from Google's index and various connected services.</li>
+          <li><strong>Personalization:</strong> With user permission, Beam can incorporate personal context to deliver more relevant results.</li>
+        </ul>
+        
+        <p>Google has also emphasized that Beam includes significant guardrails to prevent the generation of harmful content, misinformation, or biased results—though the effectiveness of these measures will likely be closely scrutinized as the system rolls out more widely.</p>
+        
+        <div class="ad-in-article">
+          <!-- Include in-article ad from ad-scripts.html -->
+          <script>
+            fetch('../ads/ad-scripts.html')
+              .then(response => response.text())
+              .then(data => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, 'text/html');
+                const inArticleAd = doc.getElementById('in-article-ad');
+                document.querySelector('.ad-in-article').appendChild(inArticleAd);
+              });
+          </script>
+        </div>
+        
+        <h2>Key Features and Use Cases</h2>
+        
+        <p>During the demonstration, Google highlighted several key features and use cases that showcase Beam's capabilities:</p>
+        
+        <h3>1. Multi-Step Planning</h3>
+        
+        <p>One of the most impressive demonstrations involved travel planning. A user asked, "I want to plan a 10-day trip to Japan in October with my family of four, including two teenagers who love anime and gaming." Beam generated a comprehensive itinerary that included:</p>
+        
+        <ul>
+          <li>A day-by-day breakdown with recommended activities</li>
+          <li>Estimated costs and budget considerations</li>
+          <li>Transportation options between destinations</li>
+          <li>Weather forecasts for October in different regions</li>
+          <li>Specific recommendations for anime and gaming attractions</li>
+        </ul>
+        
+        <p>The user could then refine the plan by asking follow-up questions or making adjustments, with Beam updating the itinerary in real-time.</p>
+        
+        <h3>2. Visual Understanding and Shopping</h3>
+        
+        <p>Another compelling use case demonstrated was visual search and shopping. Users can upload an image or take a photo and ask specific questions about what they're seeing. For example:</p>
+        
+        <ul>
+          <li>"What plant is this and how do I care for it?"</li>
+          <li>"Where can I buy this chair or something similar in my price range?"</li>
+          <li>"How do I fix this error on my computer screen?"</li>
+        </ul>
+        
+        <p>Beam can identify objects, provide detailed information, and even connect users with relevant shopping or service options—all within the same interface.</p>
+        
+        <h3>3. Educational Tool</h3>
+        
+        <p>Google emphasized Beam's potential as an educational resource. The system can break down complex topics into understandable explanations, provide step-by-step solutions to problems, and adapt its explanations based on the user's level of understanding.</p>
+        
+        <p>In one demonstration, a student asked about quantum computing. Beam first provided a high-level overview, then allowed the student to drill down into specific aspects of the topic, generating diagrams and analogies to help explain difficult concepts.</p>
+        
+        <h2>Publisher and Website Impacts</h2>
+        
+        <p>Perhaps the most significant question surrounding Beam is how it will affect publishers and websites that rely on Google for traffic. If users can get comprehensive information directly within Beam, will they still click through to source websites?</p>
+        
+        <p>Google has attempted to address these concerns by implementing several features:</p>
+        
+        <ul>
+          <li><strong>Attribution panels:</strong> Beam prominently displays the sources of information used to generate responses.</li>
+          <li><strong>Publisher integration:</strong> A new program allows publishers to have their content featured more prominently within Beam responses.</li>
+          <li><strong>Click-through opportunities:</strong> Beam includes multiple opportunities for users to visit source websites for more in-depth information.</li>
+        </ul>
+        
+        <p>Nevertheless, many industry observers remain skeptical about the impact on the broader web ecosystem. Danny Sullivan, Google's Search Liaison, acknowledged these concerns: "We understand that Beam represents a significant change in how people interact with search. We're committed to ensuring that publishers and creators continue to be able to reach audiences and monetize their content."</p>
+        
+        <h2>Privacy and Data Usage</h2>
+        
+        <p>Given the more conversational and potentially personal nature of Beam interactions, privacy considerations are front and center. Google has outlined several privacy measures:</p>
+        
+        <ul>
+          <li>Conversations with Beam can be automatically deleted after 18 months (or sooner with user controls)</li>
+          <li>Users can view and delete their Beam history at any time</li>
+          <li>Sensitive personal queries will have enhanced privacy protections</li>
+          <li>Personalization features require explicit opt-in</li>
+        </ul>
+        
+        <p>Despite these assurances, privacy advocates have already raised concerns about the potential for Beam to collect even more detailed user information than traditional search. The conversational nature could encourage users to share more personal details, creating new privacy challenges.</p>
+        
+        <h2>Competitive Landscape and Industry Reaction</h2>
+        
+        <p>Google Beam enters a rapidly evolving landscape of AI-powered information tools. Microsoft has been aggressively integrating OpenAI's technology into Bing, while numerous startups have launched specialized AI search and assistant products.</p>
+        
+        <p>Initial industry reaction to Beam has been mixed. Some analysts view it as a decisive move that cements Google's leadership in search for the AI era, while others question whether the new approach might actually create opportunities for competitors to differentiate themselves by offering alternative models of information discovery.</p>
+        
+        <p>"Google is essentially betting that the future of search is not search as we know it," noted tech analyst Maria Rodriguez. "They're right that AI is transforming how we access information, but there's no guarantee that their particular vision of AI-powered information retrieval will be the one that resonates most with users."</p>
+        
+        <h2>Rollout and Availability</h2>
+        
+        <p>Google announced that Beam will begin rolling out gradually over the next few months:</p>
+        
+        <ul>
+          <li>Initial access will be through a waitlist program in the US</li>
+          <li>Beam will first be available in English, with more languages to follow</li>
+          <li>The technology will be integrated into the Google app, Chrome browser, and Google.com</li>
+          <li>A dedicated Beam app will also be available for iOS and Android</li>
+        </ul>
+        
+        <p>The company has emphasized that traditional Google Search will continue to be available alongside Beam, allowing users to choose their preferred search experience.</p>
+        
+        <h2>The Future of Information Discovery</h2>
+        
+        <p>Google Beam represents a pivotal moment in the evolution of how we discover and interact with information online. While it builds on the foundation established by Google's traditional search engine, it also signals a fundamental shift in the company's approach—from helping users find information to directly answering their questions and solving their problems.</p>
+        
+        <p>Whether this new paradigm will fully replace the familiar blue links remains to be seen, but it's clear that the way we search for information is undergoing its most significant transformation in decades. As Beam moves from limited testing to widespread availability, we'll be closely monitoring its impact on users, publishers, and the broader web ecosystem.</p>
+        
+        <p>What do you think about Google Beam? Will it change how you search for information online? Share your thoughts in the comments below.</p>
+        
+        <div class="share-buttons">
+          <h3>Share this article:</h3>
+          <a href="#" class="share-button"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="share-button"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="share-button"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="share-button"><i class="fab fa-reddit-alien"></i></a>
+          <a href="#" class="share-button"><i class="far fa-envelope"></i></a>
+        </div>
+        
+        <div class="author-bio">
+          <img src="https://placehold.co/150x150/cccccc/666666?text=MJ" alt="Mark Johnson" class="author-image">
+          <div class="author-info">
+            <h3>About the Author</h3>
+            <h4>Mark Johnson</h4>
+            <p>Mark is a senior technology reporter at TechTrend Digest who covers search engines, AI, and the tech giants. He has been covering the technology industry for over a decade, with a focus on how digital platforms shape our access to information.</p>
+            <div class="author-social">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Related Posts -->
+        <section class="related-posts">
+          <h3>You May Also Like</h3>
+          <div class="article-list">
+            <article class="article-card">
+              <div class="article-image">
+                <img src="https://placehold.co/600x400/e4f2fd/2d7cc1?text=ChatGPT+Guide" alt="ChatGPT Guide">
+              </div>
+              <div class="article-content">
+                <span class="article-category">AI Breakthroughs</span>
+                <h3 class="article-title">Ultimate Guide to Using ChatGPT Effectively</h3>
+                <div class="article-meta">
+                  <span><i class="fas fa-user"></i> Jane Smith</span>
+                  <span><i class="fas fa-calendar"></i> May 25, 2025</span>
+                </div>
+                <a href="chatgpt-guide.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </article>
+            
+            <article class="article-card">
+              <div class="article-image">
+                <img src="https://placehold.co/600x400/ffebee/c62828?text=AI+Ethics" alt="AI Ethics">
+              </div>
+              <div class="article-content">
+                <span class="article-category">AI Breakthroughs</span>
+                <h3 class="article-title">The Ethical Dilemmas Facing AI Development in 2025</h3>
+                <div class="article-meta">
+                  <span><i class="fas fa-user"></i> Sarah Williams</span>
+                  <span><i class="fas fa-calendar"></i> May 10, 2025</span>
+                </div>
+                <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </article>
+            
+            <article class="article-card">
+              <div class="article-image">
+                <img src="https://placehold.co/600x400/e4f2fd/2d7cc1?text=AI+Research" alt="AI Research">
+              </div>
+              <div class="article-content">
+                <span class="article-category">AI Breakthroughs</span>
+                <h3 class="article-title">How Multimodal AI Models Are Changing Content Creation</h3>
+                <div class="article-meta">
+                  <span><i class="fas fa-user"></i> Jane Smith</span>
+                  <span><i class="fas fa-calendar"></i> May 2, 2025</span>
+                </div>
+                <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </section>
+        
+        <!-- Comments Section -->
+        <section class="comments-section">
+          <h3>Comments (18)</h3>
+          <div class="comment-form">
+            <h4>Leave a Comment</h4>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+              </div>
+              <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea id="comment" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn">Submit Comment</button>
+            </form>
+          </div>
+          
+          <div class="comments-list">
+            <div class="comment">
+              <div class="comment-author">
+                <img src="https://placehold.co/50x50/cccccc/666666?text=RK" alt="Robert Kim">
+                <div>
+                  <h4>Robert Kim</h4>
+                  <span>May 21, 2025 at 9:22 AM</span>
+                </div>
+              </div>
+              <div class="comment-content">
+                <p>I'm concerned about the impact this will have on websites that rely on Google traffic. If users get all their answers directly in Beam, why would they click through to the actual sites? Google says they have publisher integration, but I'm skeptical about how well this will work in practice.</p>
+              </div>
+              <div class="comment-actions">
+                <a href="#"><i class="fas fa-reply"></i> Reply</a>
+                <a href="#"><i class="fas fa-thumbs-up"></i> Like</a>
+              </div>
+            </div>
+            
+            <div class="comment">
+              <div class="comment-author">
+                <img src="https://placehold.co/50x50/cccccc/666666?text=TJ" alt="Tara Johnson">
+                <div>
+                  <h4>Tara Johnson</h4>
+                  <span>May 20, 2025 at 5:45 PM</span>
+                </div>
+              </div>
+              <div class="comment-content">
+                <p>I got access to the beta last week, and I have to say it's pretty impressive. The way it maintains context through a conversation feels very natural. I was planning a hiking trip and it was able to suggest routes based on my fitness level, time constraints, and weather forecasts. Much more useful than jumping between different websites!</p>
+              </div>
+              <div class="comment-actions">
+                <a href="#"><i class="fas fa-reply"></i> Reply</a>
+                <a href="#"><i class="fas fa-thumbs-up"></i> Like</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Author Bio (Mobile Only) -->
+      <div class="mobile-author-bio">
+        <!-- Populated via CSS media query -->
+      </div>
+      
+      <!-- Newsletter Signup -->
+      <div class="newsletter">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter to receive the latest tech news and updates straight to your inbox.</p>
+        <!-- Mailchimp Signup Form -->
+        <div id="mc_embed_signup">
+          <form action="https://yoursite.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXXXXX&amp;id=XXXXXXXXXX" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form" target="_blank" novalidate>
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email address">
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Sidebar Ad -->
+      <div class="ad-sidebar">
+        <p class="ad-text">Advertisement</p>
+        <!-- Include sidebar ad from ad-scripts.html -->
+        <script>
+          fetch('../ads/ad-scripts.html')
+            .then(response => response.text())
+            .then(data => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(data, 'text/html');
+              const sidebarAd = doc.getElementById('sidebar-ad');
+              document.querySelector('.ad-sidebar').appendChild(sidebarAd);
+            });
+        </script>
+      </div>
+      
+      <!-- Table of Contents -->
+      <div class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#beyond-the-blue-links-a-new-search-paradigm">Beyond the Blue Links</a></li>
+          <li><a href="#the-technology-behind-beam">The Technology Behind Beam</a></li>
+          <li><a href="#key-features-and-use-cases">Key Features and Use Cases</a></li>
+          <li><a href="#publisher-and-website-impacts">Publisher and Website Impacts</a></li>
+          <li><a href="#privacy-and-data-usage">Privacy and Data Usage</a></li>
+          <li><a href="#competitive-landscape-and-industry-reaction">Competitive Landscape</a></li>
+          <li><a href="#rollout-and-availability">Rollout and Availability</a></li>
+          <li><a href="#the-future-of-information-discovery">The Future of Information Discovery</a></li>
+        </ul>
+      </div>
+      
+      <!-- Popular Posts -->
+      <div class="popular-posts">
+        <h3>Popular Posts</h3>
+        <ul>
+          <li>
+            <a href="chatgpt-guide.html">
+              <span class="post-title">Ultimate Guide to Using ChatGPT Effectively</span>
+              <span class="post-date">May 25, 2025</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="post-title">MacBook Pro M3 Max: Two Months Later</span>
+              <span class="post-date">May 18, 2025</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="post-title">10 VS Code Extensions That Will Boost Your Productivity</span>
+              <span class="post-date">May 15, 2025</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="post-title">Building the Ultimate Smart Home in 2025</span>
+              <span class="post-date">May 5, 2025</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Tags Cloud -->
+      <div class="tags-cloud">
+        <h3>Related Topics</h3>
+        <div class="tags">
+          <a href="#" class="tag">Google</a>
+          <a href="#" class="tag">AI</a>
+          <a href="#" class="tag">Search</a>
+          <a href="#" class="tag">LLMs</a>
+          <a href="#" class="tag">Machine Learning</a>
+          <a href="#" class="tag">Big Tech</a>
+          <a href="#" class="tag">Information Retrieval</a>
+          <a href="#" class="tag">Web Publishers</a>
+          <a href="#" class="tag">Privacy</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About TechTrend Digest</h3>
+          <p>Your source for the latest news and insights in technology, AI breakthroughs, gadget reviews, and software tips.</p>
+        </div>
+        
+        <div class="footer-column">          <h3>Categories</h3>
+          <ul>
+            <li><a href="../index.html#ai-breakthroughs">AI Breakthroughs</a></li>
+            <li><a href="../index.html#tech-news">Tech News</a></li>
+            <li><a href="../index.html#software-tips">Software Tips</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Industry News</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Advertise with Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechTrend Digest. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Custom JavaScript -->
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Show side ads after scrolling past the first screen
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var showAfter = window.innerHeight * 0.8;
+      var leftAd = document.getElementById('ad-side-left');
+      var rightAd = document.getElementById('ad-side-right');
+      if (scrollY > showAfter) {
+        leftAd && (leftAd.style.display = 'block');
+        rightAd && (rightAd.style.display = 'block');
+      } else {
+        leftAd && (leftAd.style.display = 'none');
+        rightAd && (rightAd.style.display = 'none');
+      }
+    });
+  </script>
+</body>
+</html>

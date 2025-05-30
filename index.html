@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechTrend Digest - Latest AI & Tech News</title>
+  <meta name="description" content="Stay updated with the latest news and trends in AI, gadgets, and software from TechTrend Digest.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.ico">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <h1>Tech<span>Trend</span> Digest</h1>
+        </a>
+      </div>
+      
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+        <nav>
+        <ul class="nav-menu" data-nav-x="mn-43p">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#ai-breakthroughs">AI Breakthroughs</a></li>
+          <li><a href="#tech-news">Tech News</a></li>
+          <li><a href="#software-tips">Software Tips</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Banner Ad -->
+  <div class="container">
+    <div class="ad-banner">
+      <p class="ad-text">Advertisement</p>
+      <!-- Include ad banner from ad-scripts.html -->
+      <script>
+        fetch('ads/ad-scripts.html')
+          .then(response => response.text())
+          .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const bannerAd = doc.getElementById('banner-ad');
+            document.querySelector('.ad-banner').appendChild(bannerAd);
+          });
+      </script>
+    </div>
+  </div>
+  
+  <!-- Search Bar -->
+  <div class="container">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search articles...">
+      <button>
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+    <!-- Hero Section -->
+  <section class="hero" data-sect-id="hr-01">
+    <div class="container c-xp42">
+      <h2>The Future of AI and Tech</h2>
+      <p>Stay ahead with our AI-crafted content on the latest breakthroughs, tech news, and software innovations — created by humans and AI working together.</p>
+      <a href="#featured" class="btn btn--primary" data-trk="hero-cta-01">
+        <i class="fas fa-rocket"></i> Explore Top Stories
+      </a>
+      <!-- d8rt5 -->
+    </div>
+  </section>
+  
+  <!-- Main Content -->
+  <div class="container main-content">
+    <!-- Articles Section -->
+    <section class="articles-section">
+      <h2 id="featured">Featured Articles</h2>
+      <div class="article-list">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="https://placehold.co/600x400/e4f2fd/2d7cc1?text=ChatGPT+Guide" alt="ChatGPT Guide">
+          </div>
+          <div class="article-content">
+            <span class="article-category">AI Breakthroughs</span>
+            <h3 class="article-title">Ultimate Guide to Using ChatGPT Effectively</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Jane Smith</span>
+              <span><i class="fas fa-calendar"></i> May 25, 2025</span>
+            </div>
+            <p class="article-excerpt">Learn how to craft perfect prompts, use advanced features, and get the most out of ChatGPT for your work and creative projects.</p>
+            <a href="articles/chatgpt-guide.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="https://placehold.co/600x400/f7f0ff/5b3b8c?text=Google+Beam" alt="Google Beam">
+          </div>
+          <div class="article-content">
+            <span class="article-category">AI Breakthroughs</span>
+            <h3 class="article-title">Google Beam: The Next Evolution in Search Technology</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Mark Johnson</span>
+              <span><i class="fas fa-calendar"></i> May 20, 2025</span>
+            </div>
+            <p class="article-excerpt">Google's new AI-powered search experience aims to revolutionize how we find and interact with information online.</p>
+            <a href="articles/google-beam.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="https://placehold.co/600x400/e9f5e9/2e7d32?text=MacBook+Pro+M3" alt="MacBook Pro M3">
+          </div>          <div class="article-content">
+            <span class="article-category">Tech News</span>
+            <h3 class="article-title">MacBook Pro M3 Max: Two Months Later</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Alex Chen</span>
+              <span><i class="fas fa-calendar"></i> May 18, 2025</span>
+            </div>
+            <p class="article-excerpt">Our long-term review of Apple's most powerful laptop reveals how it holds up for professional creative work.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        
+        <!-- Article 4 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="https://placehold.co/600x400/fff3e0/ef6c00?text=VS+Code+Tips" alt="VS Code Tips">
+          </div>
+          <div class="article-content">
+            <span class="article-category">Software Tips</span>
+            <h3 class="article-title">10 VS Code Extensions That Will Boost Your Productivity</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> David Park</span>
+              <span><i class="fas fa-calendar"></i> May 15, 2025</span>
+            </div>
+            <p class="article-excerpt">Transform your coding experience with these essential Visual Studio Code extensions for developers.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        
+        <!-- Article 5 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="https://placehold.co/600x400/ffebee/c62828?text=AI+Ethics" alt="AI Ethics">
+          </div>
+          <div class="article-content">
+            <span class="article-category">AI Breakthroughs</span>
+            <h3 class="article-title">The Ethical Dilemmas Facing AI Development in 2025</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Sarah Williams</span>
+              <span><i class="fas fa-calendar"></i> May 10, 2025</span>
+            </div>
+            <p class="article-excerpt">As AI becomes more integrated into our daily lives, we explore the moral questions that researchers and companies must address.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        
+        <!-- Article 6 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="https://placehold.co/600x400/e0f7fa/006064?text=Smart+Home" alt="Smart Home">
+          </div>          <div class="article-content">
+            <span class="article-category">Tech News</span>
+            <h3 class="article-title">Building the Ultimate Smart Home in 2025: A Comprehensive Guide</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Michael Torres</span>
+              <span><i class="fas fa-calendar"></i> May 5, 2025</span>
+            </div>
+            <p class="article-excerpt">From Matter-compatible devices to AI assistants, here's everything you need to know about creating a modern smart home.</p>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      
+      <!-- Category Sections -->
+      <section id="ai-breakthroughs">
+        <h2>AI Breakthroughs</h2>
+        <div class="article-list">
+          <!-- More AI articles would go here -->
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://placehold.co/600x400/e4f2fd/2d7cc1?text=AI+Research" alt="AI Research">
+            </div>
+            <div class="article-content">
+              <span class="article-category">AI Breakthroughs</span>
+              <h3 class="article-title">How Multimodal AI Models Are Changing Content Creation</h3>
+              <div class="article-meta">
+                <span><i class="fas fa-user"></i> Jane Smith</span>
+                <span><i class="fas fa-calendar"></i> May 2, 2025</span>
+              </div>
+              <p class="article-excerpt">The latest advancements in AI models that can work with text, images, and audio simultaneously.</p>
+              <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </section>        <section id="tech-news">
+        <h2>Tech News</h2>
+        <div class="article-list" data-list-type="tech-news">
+          <!-- Tech News articles -->
+          <article class="article-card" data-art-id="tn-01">
+            <div class="article-image">
+              <img src="https://placehold.co/600x400/e0f7fa/006064?text=Tech+News" alt="Tech News">
+            </div>
+            <div class="article-content">
+              <span class="article-category">Tech News</span>
+              <h3 class="article-title">Tech Industry Moves Toward Open Source AI Development</h3>
+              <div class="article-meta">
+                <span><i class="fas fa-user"></i> AI Team</span>
+                <span><i class="fas fa-calendar"></i> May 28, 2025</span>
+              </div>
+              <p class="article-excerpt">Major tech companies announce new coalition for open standards in AI development, potentially reshaping how AI technologies evolve.</p>
+              <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </section>
+      
+      <section id="software-tips">
+        <h2>Software Tips</h2>
+        <div class="article-list">
+          <!-- More software articles would go here -->
+          <article class="article-card">
+            <div class="article-image">
+              <img src="https://placehold.co/600x400/fff3e0/ef6c00?text=Software+Tips" alt="Software Tips">
+            </div>
+            <div class="article-content">
+              <span class="article-category">Software Tips</span>
+              <h3 class="article-title">5 Essential Command Line Tools Every Developer Should Know</h3>
+              <div class="article-meta">
+                <span><i class="fas fa-user"></i> David Park</span>
+                <span><i class="fas fa-calendar"></i> April 25, 2025</span>
+              </div>
+              <p class="article-excerpt">Boost your productivity with these powerful command line utilities that simplify common development tasks.</p>
+              <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Newsletter Signup -->
+      <div class="newsletter">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter to receive the latest tech news and updates straight to your inbox.</p>
+        <!-- Mailchimp Signup Form -->
+        <div id="mc_embed_signup">
+          <form action="https://yoursite.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXXXXX&amp;id=XXXXXXXXXX" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form" target="_blank" novalidate>
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email address">
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Sidebar Ad -->
+      <div class="ad-sidebar">
+        <p class="ad-text">Advertisement</p>
+        <!-- Include sidebar ad from ad-scripts.html -->
+        <script>
+          fetch('ads/ad-scripts.html')
+            .then(response => response.text())
+            .then(data => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(data, 'text/html');
+              const sidebarAd = doc.getElementById('sidebar-ad');
+              document.querySelector('.ad-sidebar').appendChild(sidebarAd);
+            });
+        </script>
+      </div>
+      
+      <!-- Popular Posts -->
+      <div class="popular-posts">
+        <h3>Popular Posts</h3>
+        <ul>
+          <li>
+            <a href="articles/chatgpt-guide.html">
+              <span class="post-title">Ultimate Guide to Using ChatGPT Effectively</span>
+              <span class="post-date">May 25, 2025</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="post-title">MacBook Pro M3 Max: Two Months Later</span>
+              <span class="post-date">May 18, 2025</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="post-title">10 VS Code Extensions That Will Boost Your Productivity</span>
+              <span class="post-date">May 15, 2025</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="post-title">Building the Ultimate Smart Home in 2025</span>
+              <span class="post-date">May 5, 2025</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Crypto Donation -->
+      <div class="crypto-donation">
+        <h3>Support Our Work</h3>
+        <p>Help us create more quality content by donating with cryptocurrency.</p>
+        <script>
+          fetch('ads/ad-scripts.html')
+            .then(response => response.text())
+            .then(data => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(data, 'text/html');
+              const donation = doc.querySelector('.donation-container');
+              document.querySelector('.crypto-donation').appendChild(donation);
+            });
+        </script>
+      </div>
+      
+      <!-- Tags Cloud -->
+      <div class="tags-cloud">
+        <h3>Popular Tags</h3>
+        <div class="tags">
+          <a href="#" class="tag">AI</a>
+          <a href="#" class="tag">ChatGPT</a>
+          <a href="#" class="tag">Machine Learning</a>
+          <a href="#" class="tag">Apple</a>
+          <a href="#" class="tag">Google</a>
+          <a href="#" class="tag">Windows</a>
+          <a href="#" class="tag">Linux</a>
+          <a href="#" class="tag">Smartphones</a>
+          <a href="#" class="tag">Laptops</a>
+          <a href="#" class="tag">Coding</a>
+          <a href="#" class="tag">Software</a>
+          <a href="#" class="tag">Hardware</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About TechTrend Digest</h3>
+          <p>Your source for the latest news and insights in technology, AI breakthroughs, gadget reviews, and software tips.</p>
+        </div>
+        
+        <div class="footer-column">          <h3>Categories</h3>
+          <ul>
+            <li><a href="#ai-breakthroughs">AI Breakthroughs</a></li>
+            <li><a href="#tech-news">Tech News</a></li>
+            <li><a href="#software-tips">Software Tips</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Industry News</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Advertise with Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechTrend Digest. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

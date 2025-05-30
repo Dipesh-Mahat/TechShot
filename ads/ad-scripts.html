@@ -1,0 +1,130 @@
+<!-- TechTrend Digest - Ad Scripts and Placeholders -->
+
+<!-- 
+Instructions for implementing ad networks:
+1. Replace the placeholder divs with actual ad code from your chosen ad network
+2. Ensure ad networks are compliant with privacy laws (GDPR, CCPA, etc.)
+3. Consider adding a cookie consent banner if using personalized ads
+-->
+
+<!-- Banner Ad Container (Top of Page) -->
+<div class="ad-placeholder" id="banner-ad">
+  <!-- 
+  IMPLEMENTATION GUIDE:
+  
+  Example for Bitmedia:
+  <script type="text/javascript">
+    (function(w, d, s, n) {
+      w[n] = w[n] || [];
+      w[n].push({
+        adSpaceId: 'YOUR_BITMEDIA_AD_SPACE_ID',
+        domainId: 'YOUR_BITMEDIA_DOMAIN_ID'
+      });
+      var b = d.createElement(s);
+      b.src = 'https://ads.bitmedia.io/js/adbybm.js/YOUR_BITMEDIA_PUBLISHER_ID';
+      var a = d.getElementsByTagName(s)[0];
+      a.parentNode.insertBefore(b, a);
+    })(window, document, 'script', '_bm');
+  </script>
+  -->
+  
+  <!-- Placeholder content until real ads are implemented -->
+  <div class="ad-placeholder-content">
+    <p class="ad-text">Advertisement</p>
+    <div class="ad-mockup">
+      <div style="width: 100%; height: 90px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc;">
+        <span style="color: #999;">728x90 Banner Ad</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Ad Container -->
+<div class="ad-placeholder" id="sidebar-ad">
+  <!--
+  IMPLEMENTATION GUIDE:
+  
+  Example for CoinTraffic:
+  <div id="cointraffic_widget_code"></div>
+  <script>
+    window.coinTraffic = window.coinTraffic || [];
+    window.coinTraffic.push({
+      widget_id: "YOUR_COINTRAFFIC_WIDGET_ID",
+      container: "cointraffic_widget_code"
+    });
+  </script>
+  <script async src="https://cointraffic.io/widget/ct.js"></script>
+  -->
+  
+  <!-- Placeholder content until real ads are implemented -->
+  <div class="ad-placeholder-content">
+    <p class="ad-text">Advertisement</p>
+    <div class="ad-mockup">
+      <div style="width: 300px; height: 250px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc;">
+        <span style="color: #999;">300x250 Rectangle Ad</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- In-Article Ad Container -->
+<div class="ad-placeholder" id="in-article-ad">
+  <!--
+  IMPLEMENTATION GUIDE:
+  
+  Example for general ad networks:
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="YOUR_AD_CLIENT"
+       data-ad-slot="YOUR_AD_SLOT"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  -->
+  
+  <!-- Placeholder content until real ads are implemented -->
+  <div class="ad-placeholder-content">
+    <p class="ad-text">Advertisement</p>
+    <div class="ad-mockup">
+      <div style="width: 100%; height: 250px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc;">
+        <span style="color: #999;">In-Article Ad</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Crypto Donation Button (e.g., Plisio) -->
+<div class="donation-container">
+  <!--
+  IMPLEMENTATION GUIDE:
+  
+  Example for Plisio:
+  <form action="https://plisio.net/pay" method="post" target="_blank">
+    <input type="hidden" name="amount" value="10">
+    <input type="hidden" name="currency" value="USD">
+    <input type="hidden" name="currency_receive" value="BTC">
+    <input type="hidden" name="success_url" value="https://yourdomain.com/thank-you">
+    <input type="hidden" name="callback_url" value="https://yourdomain.com/plisio-callback">
+    <input type="hidden" name="api_key" value="YOUR_PLISIO_API_KEY">
+    <button type="submit" class="donation-button">Support Us with Crypto</button>
+  </form>
+  -->
+  
+  <!-- Placeholder content until real donation is implemented -->
+  <div class="donation-placeholder">
+    <button class="btn donation-btn">
+      <i class="fas fa-coins"></i> Support Us with Crypto
+    </button>
+  </div>
+</div>
+
+<!-- Add this to your JavaScript file to handle ad loading events -->
+<script>
+  // This would normally be part of your main.js file
+  document.addEventListener('DOMContentLoaded', function() {
+    // You could implement ad-related functionality here
+    console.log('Ad placeholders initialized');
+  });
+</script>

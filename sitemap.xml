@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://yourusername.github.io/techtrend-digest/</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Articles -->
+  <url>
+    <loc>https://yourusername.github.io/techtrend-digest/articles/chatgpt-guide.html</loc>
+    <lastmod>2025-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/techtrend-digest/articles/google-beam.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Category Pages -->
+  <url>
+    <loc>https://yourusername.github.io/techtrend-digest/#ai-breakthroughs</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/techtrend-digest/#tech-news</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/techtrend-digest/#software-tips</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Other Pages -->
+  <url>
+    <loc>https://yourusername.github.io/techtrend-digest/about.html</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/techtrend-digest/contact.html</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
