@@ -142,9 +142,10 @@ class ComponentLoader {
   /**
    * Re-initialize JavaScript functionality after components are loaded
    */
-  reinitializeScripts() {
-    // Re-initialize mobile menu, sticky header, etc.
-    if (typeof initMobileMenu === 'function') {
+  reinitializeScripts() {    // Re-initialize mobile menu, sticky header, etc.
+    if (typeof initEnhancedMobileMenu === 'function') {
+      initEnhancedMobileMenu();
+    } else if (typeof initMobileMenu === 'function') {
       initMobileMenu();
     }
     if (typeof initStickyHeader === 'function') {

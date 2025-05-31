@@ -15,7 +15,7 @@
 All core requirements have been implemented with enhancements for:
 - Security and obfuscation
 - Focus on AI content and tech news
-- Team structure (Dipesh with AI assistants)
+- Editorial team structure
 - GitHub Pages deployment readiness
 
 🚀 GITHUB PAGES DEPLOYMENT PLAN:

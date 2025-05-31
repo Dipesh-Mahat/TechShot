@@ -203,7 +203,7 @@
 
 .faq-item h3::after {
   content: "\f078"; /* Font Awesome chevron down */
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
   right: 20px;
@@ -263,10 +263,25 @@
   to { opacity: 1; }
 }
 
-/* Make FAQ responsive */
+/* Enhanced mobile responsiveness for contact page */
 @media (max-width: 768px) {
   .contact-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-method {
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .contact-form-container {
+    padding: 20px;
   }
   
   .faq-item h3 {
@@ -277,5 +292,52 @@
   
   .faq-item p {
     padding: 15px;
+    font-size: 0.95rem;
+  }
+  
+  .faq-section h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-hero p {
+    font-size: 1rem;
+  }
+  
+  .contact-form-container {
+    padding: 15px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  .faq-item h3 {
+    font-size: 0.95rem;
+    padding: 12px;
+    min-height: 50px;
+  }
+  
+  .faq-item h3::after {
+    right: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .faq-item p {
+    padding: 12px;
+    font-size: 0.9rem;
   }
 }

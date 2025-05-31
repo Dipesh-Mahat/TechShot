@@ -1,6 +1,6 @@
 # TechShot
 
-A modern, professional tech blog website focused on AI and tech news, created by Dipesh Mahat with AI assistance.
+A modern, professional tech blog website focused on AI and tech news, delivering cutting-edge insights and analysis.
 
 ## Features
 
@@ -17,7 +17,7 @@ A modern, professional tech blog website focused on AI and tech news, created by
 
 - **Home Page**: Lists all articles organized by category (AI Breakthroughs, Tech News, Software Tips)
 - **Article Pages**: Individual article pages with rich content, related posts, and sharing options
-- **About Page**: Information about the site, its mission, and the team (Dipesh and AI assistants)
+- **About Page**: Information about the site, its mission, and editorial team
 - **Contact Page**: Contact form for reader inquiries and feedback
 
 ## Directory Structure
@@ -89,7 +89,7 @@ The site includes placeholder areas for ads in:
 
 ## Maintenance
 
-This site is maintained by Dipesh Mahat with assistance from AI tools. It's designed for minimal maintenance while providing a professional tech news experience.
+This site is designed for minimal maintenance while providing a professional tech news experience.
 
 ## License
 

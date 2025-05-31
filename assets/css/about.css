@@ -431,7 +431,7 @@
 
 .about-content > ul li::before {
   content: '\f00c';
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome 6 Free';
   font-weight: 900;
   position: absolute;
   left: 0;
@@ -514,11 +514,17 @@
   .values-list li {
     font-size: 1rem;
   }
+  
+  .coverage-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
   .about-section h1 {
     font-size: 2rem;
+    line-height: 1.2;
   }
   
   .about-content {
@@ -527,6 +533,11 @@
   
   .about-content p {
     font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .coverage-item {
+    padding: 1.5rem;
   }
   
   .coverage-item i {
@@ -538,10 +549,44 @@
   
   .coverage-item h3 {
     font-size: 1.3rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  .coverage-item p {
+    font-size: 0.95rem;
   }
   
   .btn {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .mission-section h2,
+  .values-section h2,
+  .team-section h2 {
+    font-size: 1.7rem;
+  }
+  
+  .values-list li {
+    font-size: 0.95rem;
+    padding: 20px 15px 20px 25px;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .coverage-item {
+    transition: transform 0.2s ease;
+  }
+  
+  .coverage-item:active {
+    transform: scale(0.98);
+  }
+  
+  .btn {
+    min-height: 44px;
+    touch-action: manipulation;
   }
 }
