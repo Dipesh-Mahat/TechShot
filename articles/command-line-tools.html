@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Essential Command Line Tools Every Developer Should Know - TechShot</title>
+  <meta name="description" content="Boost your productivity with these powerful command line utilities that simplify common development tasks and streamline your workflow.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/images/favicon.ico">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Side Banner Ads -->
+  <div id="ad-side-left"></div>
+  <div id="ad-side-right"></div>
+
+  <!-- Header Component Placeholder -->
+  <div id="header-placeholder" data-component="header"></div>
+  
+  <!-- Banner Ad -->
+  <div class="container">
+    <div class="ad-banner">
+      <p class="ad-text">Advertisement</p>
+      <script>
+        fetch('../ads/ad-scripts.html')
+          .then(response => response.text())
+          .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const bannerAd = doc.getElementById('banner-ad');
+            if (bannerAd) {
+              document.querySelector('.ad-banner').appendChild(bannerAd);
+            }
+          });
+      </script>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="container article-container">
+    <main class="article-main">
+      <!-- Article Header -->
+      <article class="article">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-category">Software Tips</span>
+            <div class="article-stats">
+              <span><i class="fas fa-user"></i> David Park</span>
+              <span><i class="fas fa-calendar"></i> April 25, 2025</span>
+              <span><i class="fas fa-clock"></i> 10 min read</span>
+              <span><i class="fas fa-comments"></i> 47 comments</span>
+            </div>
+          </div>
+          <h1 class="article-title">5 Essential Command Line Tools Every Developer Should Know</h1>
+          <p class="article-subtitle">Boost your productivity with these powerful command line utilities that simplify common development tasks and streamline your workflow, regardless of your programming language or platform.</p>
+        </header>
+
+        <!-- Featured Image -->
+        <div class="article-image">
+          <img src="https://placehold.co/1200x600/fff3e0/ef6c00?text=Command+Line+Tools" alt="Essential Command Line Tools">
+          <p class="image-caption">Master these command line tools to supercharge your development workflow</p>
+        </div>
+
+        <!-- Article Content -->
+        <div class="article-content">
+          <p class="article-intro">The command line might seem intimidating to new developers, but it's one of the most powerful tools in your arsenal. While modern IDEs and GUI tools have made development more accessible, mastering key command line utilities can dramatically boost your productivity and make you a more efficient developer. Here are five essential tools that every developer should have in their toolkit.</p>
+
+          <h2>Why Command Line Tools Matter</h2>
+          <p>Before diving into specific tools, it's worth understanding why command line utilities remain relevant in 2025:</p>
+          
+          <ul>
+            <li><strong>Speed and Efficiency:</strong> Once mastered, CLI tools are often faster than their GUI counterparts</li>
+            <li><strong>Automation:</strong> Easy to script and automate repetitive tasks</li>
+            <li><strong>Resource Efficiency:</strong> Lower memory and CPU usage compared to GUI applications</li>
+            <li><strong>Universal Access:</strong> Available on virtually every development environment</li>
+            <li><strong>Power and Flexibility:</strong> Complex operations that would require multiple GUI steps</li>
+          </ul>
+
+          <h2>1. Git - Version Control Mastery</h2>
+          <p>While Git GUI clients are popular, understanding Git's command line interface is crucial for any serious developer. It provides access to Git's full feature set and is essential for advanced workflows.</p>
+
+          <h3>Essential Git Commands</h3>
+          <h4>Basic Operations:</h4>
+          <pre><code># Initialize a new repository
+git init
+
+# Clone an existing repository
+git clone https://github.com/user/repo.git
+
+# Check repository status
+git status
+
+# Add files to staging area
+git add .
+git add specific-file.js
+
+# Commit changes
+git commit -m "Add new feature"
+
+# Push changes to remote
+git push origin main</code></pre>
+
+          <h4>Advanced Workflows:</h4>
+          <pre><code># Interactive rebase to clean up commit history
+git rebase -i HEAD~3
+
+# Stash changes temporarily
+git stash push -m "Work in progress"
+git stash pop
+
+# Create and switch to new branch
+git checkout -b feature/new-functionality
+
+# Merge branch with no fast-forward
+git merge --no-ff feature/new-functionality
+
+# View detailed commit history
+git log --graph --oneline --all</code></pre>
+
+          <h3>Pro Tips:</h3>
+          <ul>
+            <li><strong>Aliases:</strong> Create shortcuts for common commands (e.g., `git config --global alias.st status`)</li>
+            <li><strong>Git hooks:</strong> Automate tasks like running tests before commits</li>
+            <li><strong>Interactive staging:</strong> Use `git add -p` for selective staging</li>
+            <li><strong>Reflog:</strong> Use `git reflog` to recover "lost" commits</li>
+          </ul>
+
+          <!-- In-Article Ad -->
+          <div class="in-article-ad">
+            <p class="ad-text">Advertisement</p>
+            <script>
+              fetch('../ads/ad-scripts.html')
+                .then(response => response.text())
+                .then(data => {
+                  const parser = new DOMParser();
+                  const doc = parser.parseFromString(data, 'text/html');
+                  const inArticleAd = doc.getElementById('in-article-ad');
+                  if (inArticleAd) {
+                    document.querySelector('.in-article-ad').appendChild(inArticleAd);
+                  }
+                });
+            </script>
+          </div>
+
+          <h2>2. Ripgrep (rg) - Lightning-Fast Text Search</h2>
+          <p>Ripgrep is a modern replacement for grep that's specifically designed for searching code. It's incredibly fast, respects .gitignore files by default, and provides excellent output formatting.</p>
+
+          <h3>Installation</h3>
+          <pre><code># macOS
+brew install ripgrep
+
+# Ubuntu/Debian
+sudo apt install ripgrep
+
+# Windows (with Chocolatey)
+choco install ripgrep
+
+# Windows (with winget)
+winget install BurntSushi.ripgrep.MSVC</code></pre>
+
+          <h3>Essential Usage</h3>
+          <h4>Basic Searching:</h4>
+          <pre><code># Search for a pattern in all files
+rg "function.*getData"
+
+# Search in specific file types
+rg "TODO" --type js
+
+# Search with case sensitivity
+rg "API_KEY" --case-sensitive
+
+# Search for whole words only
+rg "test" --word-regexp</code></pre>
+
+          <h4>Advanced Features:</h4>
+          <pre><code># Search with context lines
+rg "error" -A 3 -B 3
+
+# Search and replace (preview)
+rg "oldFunction" --replace "newFunction" --passthru
+
+# Search in specific directories
+rg "import" src/ tests/
+
+# Exclude certain patterns
+rg "console.log" --glob "!*test*"
+
+# Search for patterns in file names
+rg --files | rg "component"</code></pre>
+
+          <h3>Why Ripgrep Over Traditional Grep:</h3>
+          <ul>
+            <li><strong>Speed:</strong> Often 2-10x faster than traditional grep</li>
+            <li><strong>Git-aware:</strong> Automatically ignores files in .gitignore</li>
+            <li><strong>Unicode support:</strong> Handles international characters correctly</li>
+            <li><strong>Better defaults:</strong> Sensible options enabled by default</li>
+            <li><strong>Cross-platform:</strong> Works consistently across different operating systems</li>
+          </ul>
+
+          <h2>3. fzf - Fuzzy Finding Everything</h2>
+          <p>FZF (fuzzy finder) is a command-line fuzzy finder that can be integrated with various tools to provide interactive filtering and selection. It transforms how you navigate files, command history, and more.</p>
+
+          <h3>Installation and Setup</h3>
+          <pre><code># macOS
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+
+# Ubuntu/Debian
+sudo apt install fzf
+
+# Manual installation (all platforms)
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install</code></pre>
+
+          <h3>Basic Usage</h3>
+          <h4>File Navigation:</h4>
+          <pre><code># Fuzzy find files in current directory
+fzf
+
+# Open selected file in your editor
+vim $(fzf)
+
+# Find and cd into directory
+cd $(find . -type d | fzf)</code></pre>
+
+          <h4>Integration with Other Tools:</h4>
+          <pre><code># Fuzzy find in command history
+history | fzf
+
+# Fuzzy find Git branches
+git branch | fzf
+
+# Fuzzy find processes
+ps aux | fzf</code></pre>
+
+          <h3>Advanced Integrations</h3>
+          <h4>Shell Key Bindings (after installation):</h4>
+          <ul>
+            <li><strong>Ctrl+T:</strong> Paste selected file path</li>
+            <li><strong>Ctrl+R:</strong> Search command history</li>
+            <li><strong>Alt+C:</strong> cd into selected directory</li>
+          </ul>
+
+          <h4>Custom Functions:</h4>
+          <pre><code># Add to your shell profile (.bashrc, .zshrc)
+# Fuzzy find and edit files
+fe() {
+  local files
+  files=$(find . -type f | fzf --multi --preview 'cat {}') && vim "${files[@]}"
+}
+
+# Fuzzy find Git commits
+fco() {
+  local commits commit
+  commits=$(git log --pretty=oneline --abbrev-commit --reverse) &&
+  commit=$(echo "$commits" | fzf) &&
+  git checkout $(echo "$commit" | sed "s/ .*//")
+}</code></pre>
+
+          <h2>4. htop - Advanced Process Monitoring</h2>
+          <p>While `top` is available on most Unix-like systems, `htop` provides a much more user-friendly and feature-rich interface for monitoring system processes and resource usage.</p>
+
+          <h3>Installation</h3>
+          <pre><code># macOS
+brew install htop
+
+# Ubuntu/Debian
+sudo apt install htop
+
+# CentOS/RHEL
+sudo yum install htop
+
+# Windows (WSL required)
+# Install through your Linux distribution in WSL</code></pre>
+
+          <h3>Key Features and Navigation</h3>
+          <h4>Basic Navigation:</h4>
+          <ul>
+            <li><strong>Arrow keys:</strong> Navigate through process list</li>
+            <li><strong>F9 or k:</strong> Kill selected process</li>
+            <li><strong>F6 or >:</strong> Sort by different criteria</li>
+            <li><strong>F4 or \:</strong> Filter processes</li>
+            <li><strong>F5 or t:</strong> Toggle tree view</li>
+            <li><strong>Space:</strong> Tag/untag process</li>
+          </ul>
+
+          <h4>Useful Shortcuts:</h4>
+          <pre><code># Sort by CPU usage
+Press F6, then select CPU%
+
+# Filter by user
+Press F4, type username
+
+# Show only your processes
+Press u, select your username
+
+# Tree view (show parent-child relationships)
+Press F5 or t</code></pre>
+
+          <h3>Customization Options</h3>
+          <ul>
+            <li><strong>Color schemes:</strong> Customize the appearance</li>
+            <li><strong>Column configuration:</strong> Choose which information to display</li>
+            <li><strong>Meters:</strong> Customize CPU, memory, and swap meters</li>
+            <li><strong>Save settings:</strong> Configuration persists between sessions</li>
+          </ul>
+
+          <h3>Development Use Cases</h3>
+          <ul>
+            <li><strong>Debug memory leaks:</strong> Monitor memory usage of your applications</li>
+            <li><strong>Performance analysis:</strong> Identify CPU-intensive processes</li>
+            <li><strong>Development server monitoring:</strong> Keep track of database, web server processes</li>
+            <li><strong>Resource planning:</strong> Understand system resource usage patterns</li>
+          </ul>
+
+          <h2>5. jq - JSON Processing Powerhouse</h2>
+          <p>In the API-driven development world, `jq` is invaluable for processing JSON data from the command line. It's like sed and awk specifically designed for JSON.</p>
+
+          <h3>Installation</h3>
+          <pre><code># macOS
+brew install jq
+
+# Ubuntu/Debian
+sudo apt install jq
+
+# Windows (with Chocolatey)
+choco install jq
+
+# Windows (with Scoop)
+scoop install jq</code></pre>
+
+          <h3>Basic JSON Operations</h3>
+          <h4>Pretty Printing and Basic Filtering:</h4>
+          <pre><code># Pretty print JSON
+curl -s https://api.github.com/users/octocat | jq
+
+# Extract specific field
+curl -s https://api.github.com/users/octocat | jq '.name'
+
+# Extract multiple fields
+curl -s https://api.github.com/users/octocat | jq '.name, .login, .public_repos'
+
+# Get array length
+echo '[1,2,3,4,5]' | jq 'length'</code></pre>
+
+          <h4>Working with Arrays:</h4>
+          <pre><code># Extract first element
+echo '[{"name":"John"},{"name":"Jane"}]' | jq '.[0]'
+
+# Extract specific field from all objects
+echo '[{"name":"John"},{"name":"Jane"}]' | jq '.[].name'
+
+# Filter array elements
+echo '[1,2,3,4,5]' | jq '.[] | select(. > 3)'
+
+# Map over array
+echo '[1,2,3]' | jq 'map(. * 2)'</code></pre>
+
+          <h3>Advanced jq Techniques</h3>
+          <h4>Complex Filtering and Transformation:</h4>
+          <pre><code># Filter objects by condition
+curl -s https://api.github.com/users/octocat/repos | jq '.[] | select(.language == "JavaScript")'
+
+# Group by field
+echo '[{"type":"A","value":1},{"type":"B","value":2},{"type":"A","value":3}]' | jq 'group_by(.type)'
+
+# Create new object structure
+curl -s https://api.github.com/users/octocat/repos | jq '.[] | {name: .name, stars: .stargazers_count, language: .language}'
+
+# Sort by field
+curl -s https://api.github.com/users/octocat/repos | jq 'sort_by(.stargazers_count) | reverse'</code></pre>
+
+          <h4>Real-World Examples:</h4>
+          <pre><code># Extract all email addresses from package.json
+cat package.json | jq -r '.contributors[]?.email' 2>/dev/null
+
+# Get top 5 most starred repositories
+curl -s https://api.github.com/users/microsoft/repos | jq 'sort_by(.stargazers_count) | reverse | .[0:5] | .[] | .name'
+
+# Transform API response for CSV export
+curl -s https://api.github.com/users/octocat/repos | jq -r '.[] | [.name, .language, .stargazers_count] | @csv'
+
+# Extract specific data from complex nested JSON
+cat complex.json | jq '.data.users[] | select(.active == true) | {id: .id, name: .profile.fullName}'</code></pre>
+
+          <h2>Combining Tools for Maximum Productivity</h2>
+          <p>The real power comes from combining these tools together:</p>
+
+          <h3>Powerful Combinations:</h3>
+          <pre><code># Find JavaScript files with console.log statements
+rg "console\.log" --type js | fzf
+
+# Interactive Git branch switching
+git branch | fzf | xargs git checkout
+
+# Find and kill processes interactively
+ps aux | fzf | awk '{print $2}' | xargs kill
+
+# Search for API endpoints and format JSON responses
+rg "api\.example\.com" . | fzf | xargs curl -s | jq
+
+# Find large files and analyze with htop
+find . -size +100M | fzf | xargs ls -la</code></pre>
+
+          <h2>Setting Up Your Environment</h2>
+          <h3>Shell Configuration</h3>
+          <p>Add these aliases and functions to your shell profile (.bashrc, .zshrc, etc.):</p>
+
+          <pre><code># Useful aliases
+alias ll='ls -alh'
+alias la='ls -A'
+alias l='ls -CF'
+alias grep='rg'
+alias cat='bat'  # If you have bat installed
+
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log --oneline --graph'
+
+# fzf functions
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"</code></pre>
+
+          <h3>Tool-Specific Configuration</h3>
+          <h4>Git Configuration:</h4>
+          <pre><code># Set up global Git configuration
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git config --global init.defaultBranch main
+git config --global pull.rebase false</code></pre>
+
+          <h4>Ripgrep Configuration:</h4>
+          <pre><code># Create ~/.ripgreprc for default settings
+--smart-case
+--hidden
+--glob=!.git/*
+--glob=!node_modules/*
+--glob=!*.lock</code></pre>
+
+          <h2>Learning Path and Next Steps</h2>
+          <h3>Beginner to Advanced Progression</h3>
+          <ol>
+            <li><strong>Week 1:</strong> Master basic Git commands and start using ripgrep for searching</li>
+            <li><strong>Week 2:</strong> Install and configure fzf, learn basic fuzzy finding</li>
+            <li><strong>Week 3:</strong> Set up htop and learn process monitoring basics</li>
+            <li><strong>Week 4:</strong> Start with simple jq operations for JSON processing</li>
+            <li><strong>Month 2:</strong> Create custom shell functions combining tools</li>
+            <li><strong>Month 3:</strong> Automate common workflows with scripts</li>
+          </ol>
+
+          <h3>Additional Tools to Explore</h3>
+          <p>Once you've mastered these five essentials, consider these advanced tools:</p>
+          <ul>
+            <li><strong>bat:</strong> A cat replacement with syntax highlighting</li>
+            <li><strong>exa:</strong> A modern ls replacement</li>
+            <li><strong>fd:</strong> A simple, fast, and user-friendly alternative to find</li>
+            <li><strong>delta:</strong> A better diff tool for Git</li>
+            <li><strong>tmux:</strong> Terminal multiplexer for session management</li>
+            <li><strong>vim/neovim:</strong> Powerful terminal-based editors</li>
+          </ul>
+
+          <h2>Common Pitfalls and Solutions</h2>
+          <h3>Avoiding Beginner Mistakes</h3>
+          <ul>
+            <li><strong>Not using version control:</strong> Always initialize Git in your projects</li>
+            <li><strong>Ignoring aliases:</strong> Set up shortcuts for frequently used commands</li>
+            <li><strong>Not reading man pages:</strong> Use `man command` or `command --help` to learn options</li>
+            <li><strong>Overcomplicating:</strong> Start simple and gradually add complexity</li>
+            <li><strong>Not practicing regularly:</strong> Use these tools daily to build muscle memory</li>
+          </ul>
+
+          <h3>Performance Tips</h3>
+          <ul>
+            <li><strong>Use .gitignore effectively:</strong> Helps tools like ripgrep skip irrelevant files</li>
+            <li><strong>Configure tool defaults:</strong> Set up configuration files for consistent behavior</li>
+            <li><strong>Learn keyboard shortcuts:</strong> Faster than reaching for the mouse</li>
+            <li><strong>Combine tools wisely:</strong> Pipe outputs between tools for complex operations</li>
+          </ul>
+
+          <h2>Conclusion</h2>
+          <p>Mastering these five command line tools—Git, Ripgrep, fzf, htop, and jq—will significantly enhance your development workflow. They represent different aspects of development: version control, code searching, file navigation, system monitoring, and data processing.</p>
+
+          <p>The key to success is consistent practice and gradual adoption. Start with one tool, become comfortable with its basic features, then move to the next. As you become more proficient, you'll discover powerful combinations and develop your own workflows that can save hours of work each week.</p>
+
+          <p>Remember, the command line isn't about showing off or being old-fashioned—it's about efficiency and power. These tools remain relevant because they solve real problems that developers face daily. In a world of ever-changing frameworks and technologies, investing time in fundamental tools like these provides lasting value for your career.</p>
+
+          <p>Whether you're debugging a production issue at 2 AM, exploring a new codebase, or automating repetitive tasks, these tools will serve you well. Take the time to learn them properly, and they'll repay that investment many times over throughout your development career.</p>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+          <div class="author-avatar">
+            <img src="https://placehold.co/80x80/673ab7/ffffff?text=DP" alt="David Park">
+          </div>
+          <div class="author-info">
+            <h4>David Park</h4>
+            <p>David is a senior software engineer with 12 years of experience in full-stack development. He's passionate about developer productivity and has conducted workshops on command line efficiency at major tech conferences. He contributes to several open-source CLI tools.</p>
+            <div class="author-social">
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Posts -->
+        <div class="related-posts">
+          <h3>Related Articles</h3>
+          <div class="related-grid">
+            <article class="related-card">
+              <img src="https://placehold.co/300x200/fff3e0/ef6c00?text=VS+Code+Tips" alt="VS Code Tips">
+              <div class="related-content">
+                <span class="related-category">Software Tips</span>
+                <h4><a href="vscode-extensions.html">10 VS Code Extensions That Will Boost Your Productivity</a></h4>
+                <p>Transform your coding experience with these essential Visual Studio Code extensions for developers.</p>
+              </div>
+            </article>
+            <article class="related-card">
+              <img src="https://placehold.co/300x200/2196f3/ffffff?text=ChatGPT" alt="ChatGPT Guide">
+              <div class="related-content">
+                <span class="related-category">Software Tips</span>
+                <h4><a href="chatgpt-guide.html">The Complete ChatGPT Guide for Professionals</a></h4>
+                <p>Master ChatGPT with advanced techniques, prompt engineering, and real-world applications for business and creative work.</p>
+              </div>
+            </article>
+            <article class="related-card">
+              <img src="https://placehold.co/300x200/e0f7fa/006064?text=Tech+News" alt="Open Source AI">
+              <div class="related-content">
+                <span class="related-category">Tech News</span>
+                <h4><a href="open-source-ai-development.html">Tech Industry Moves Toward Open Source AI Development</a></h4>
+                <p>Major tech companies announce new coalition for open standards in AI development, potentially reshaping how AI technologies evolve.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments-section">
+          <h3>Comments <span class="comments-count">(47)</span></h3>
+          
+          <!-- Comment Form -->
+          <form class="comment-form">
+            <div class="form-group">
+              <label for="comment-name">Name</label>
+              <input type="text" id="comment-name" required>
+            </div>
+            <div class="form-group">
+              <label for="comment-email">Email</label>
+              <input type="email" id="comment-email" required>
+            </div>
+            <div class="form-group">
+              <label for="comment-text">Comment</label>
+              <textarea id="comment-text" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Post Comment</button>
+          </form>
+
+          <!-- Existing Comments -->
+          <div class="comments-list">
+            <div class="comment">
+              <div class="comment-avatar">
+                <img src="https://placehold.co/50x50/2196f3/ffffff?text=AR" alt="Alex Rodriguez">
+              </div>
+              <div class="comment-content">
+                <div class="comment-header">
+                  <h5>Alex Rodriguez</h5>
+                  <time>2 hours ago</time>
+                </div>
+                <p>This is exactly what I needed! I've been using VS Code for everything, but these command line tools are game-changers. The fzf integration alone has saved me so much time navigating large codebases.</p>
+                <div class="comment-actions">
+                  <button class="comment-like"><i class="fas fa-thumbs-up"></i> 19</button>
+                  <button class="comment-reply">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="comment-avatar">
+                <img src="https://placehold.co/50x50/ff5722/ffffff?text=ML" alt="Maria Lopez">
+              </div>
+              <div class="comment-content">
+                <div class="comment-header">
+                  <h5>Maria Lopez</h5>
+                  <time>5 hours ago</time>
+                </div>
+                <p>Great article! I'd add one tip: learn to use `tmux` as well. Being able to have persistent terminal sessions is invaluable, especially when working on remote servers. It pairs perfectly with these tools.</p>
+                <div class="comment-actions">
+                  <button class="comment-like"><i class="fas fa-thumbs-up"></i> 23</button>
+                  <button class="comment-reply">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="comment-avatar">
+                <img src="https://placehold.co/50x50/4caf50/ffffff?text=JK" alt="James Kim">
+              </div>
+              <div class="comment-content">
+                <div class="comment-header">
+                  <h5>James Kim</h5>
+                  <time>1 day ago</time>
+                </div>
+                <p>The jq examples are particularly useful. I've been struggling with processing API responses in bash scripts, and this shows exactly what I need. Thanks for the practical examples!</p>
+                <div class="comment-actions">
+                  <button class="comment-like"><i class="fas fa-thumbs-up"></i> 16</button>
+                  <button class="comment-reply">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Table of Contents -->
+      <div class="sidebar-widget toc-widget">
+        <h3>Table of Contents</h3>
+        <ul class="toc-list">
+          <li><a href="#git">Git - Version Control Mastery</a></li>
+          <li><a href="#ripgrep">Ripgrep - Lightning-Fast Search</a></li>
+          <li><a href="#fzf">fzf - Fuzzy Finding Everything</a></li>
+          <li><a href="#htop">htop - Process Monitoring</a></li>
+          <li><a href="#jq">jq - JSON Processing</a></li>
+          <li><a href="#combining">Combining Tools</a></li>
+          <li><a href="#setup">Environment Setup</a></li>
+          <li><a href="#learning">Learning Path</a></li>
+        </ul>
+      </div>
+
+      <!-- Popular Posts -->
+      <div class="sidebar-widget">
+        <h3>Popular Posts</h3>
+        <div class="popular-posts">
+          <article class="popular-post">
+            <img src="https://placehold.co/80x60/2196f3/ffffff?text=ChatGPT" alt="ChatGPT Guide">
+            <div class="popular-content">
+              <h4><a href="chatgpt-guide.html">The Complete ChatGPT Guide for Professionals</a></h4>
+              <span class="popular-meta">15,234 views</span>
+            </div>
+          </article>
+          <article class="popular-post">
+            <img src="https://placehold.co/80x60/ff9800/ffffff?text=AI" alt="Google Beam">
+            <div class="popular-content">
+              <h4><a href="google-beam.html">Google's Project Beam: The Future of AI-Powered Search</a></h4>
+              <span class="popular-meta">12,891 views</span>
+            </div>
+          </article>
+          <article class="popular-post">
+            <img src="https://placehold.co/80x60/e91e63/ffffff?text=M3" alt="MacBook Pro M3">
+            <div class="popular-content">
+              <h4><a href="macbook-pro-m3-review.html">MacBook Pro M3 Max: Two Months Later</a></h4>
+              <span class="popular-meta">9,876 views</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="sidebar-widget">
+        <h3>Tags</h3>
+        <div class="tags-cloud">
+          <a href="#" class="tag">Command Line</a>
+          <a href="#" class="tag">Developer Tools</a>
+          <a href="#" class="tag">Productivity</a>
+          <a href="#" class="tag">Git</a>
+          <a href="#" class="tag">Terminal</a>
+          <a href="#" class="tag">Workflow</a>
+          <a href="#" class="tag">Automation</a>
+          <a href="#" class="tag">CLI Tools</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer Component Placeholder -->
+  <div id="footer-placeholder" data-component="footer"></div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/components.js"></script>
+  
+  <!-- Search Overlay -->
+  <div id="search-overlay" class="search-overlay hidden"></div>
+  
+  <!-- JavaScript -->
+  <script src="../assets/js/search.js"></script>
+</body>
+</html>
+

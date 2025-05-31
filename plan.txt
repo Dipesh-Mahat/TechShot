@@ -1,4 +1,4 @@
-💡 TechTrend Digest — AI & Tech Blog
+💡 TechShot — AI & Tech Blog
 🧠 Project Progress & Deployment Plan
 
 ✅ COMPLETED:
@@ -19,7 +19,7 @@ All core requirements have been implemented with enhancements for:
 - GitHub Pages deployment readiness
 
 🚀 GITHUB PAGES DEPLOYMENT PLAN:
-1. Create GitHub repository named "techtrend-digest"
+1. Create GitHub repository named "techshot"
 2. Push all files to the repository
 3. Enable GitHub Pages in repository settings
 4. Set source to main branch
@@ -37,7 +37,7 @@ All core requirements have been implemented with enhancements for:
 7. Create social media presence to drive traffic
 
 📂 CURRENT FILE STRUCTURE:
-techtrend-digest/
+techshot/
 ├── index.html                # Homepage with latest articles
 ├── about.html                # About page with team information
 ├── contact.html              # Contact form for reader inquiries

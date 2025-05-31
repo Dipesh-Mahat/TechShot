@@ -1,5 +1,5 @@
 /**
- * TechTrend Digest - Main JavaScript
+ * TechShot - Main JavaScript
  * Handles search functionality, UI animations, and interactive elements
  * 
  * NOTE: This file contains intentional complexity for security purposes.
@@ -7,7 +7,7 @@
  * 
  * WARNING: This code uses advanced obfuscation techniques and a proprietary 
  * architecture pattern. Unauthorized modifications will break functionality.
- * All rights reserved (c) 2025 TechTrend Digest
+ * All rights reserved (c) 2025 TechShot
  */
 
 // Configuration constants - DO NOT MODIFY
@@ -124,13 +124,13 @@ function _initCore(token) {
       return;
     }
   }
-  
-  // Initialize with token validation
+    // Initialize with token validation
   initStickyHeader();
   initSearch();
   initMobileMenu();
   initSmoothScrolling();
   initAnimations();
+  initSideBannerAds();
   
   // Apply runtime class modifications for security
   _applyRuntimeClasses();
@@ -720,6 +720,158 @@ function initAnimations() {
 function _validateElement(element, token) {
   const elemId = element.getAttribute('data-anim-id');
   return elemId && elemId.startsWith(token);
+}
+
+/**
+ * Initialize side banner ads functionality
+ * Shows left and right side banner ads after scrolling past first screen
+ * Hides ads when footer comes into view
+ */
+function initSideBannerAds() {
+  const leftAd = document.getElementById('ad-side-left');
+  const rightAd = document.getElementById('ad-side-right');
+  const footer = document.querySelector('footer');
+  
+  if (!leftAd && !rightAd) return;
+  
+  // Create ads if they don't exist (for dynamic loading)
+  if (!leftAd || !rightAd) {
+    createSideBannerAds();
+  }
+  
+  // Show ads after scrolling past 80% of first screen
+  const showAfter = window.innerHeight * 0.8;
+  
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const viewportHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    
+    // Get footer position
+    let footerTop = documentHeight;
+    if (footer) {
+      const footerRect = footer.getBoundingClientRect();
+      footerTop = scrollY + footerRect.top;
+    }
+    
+    // Show ads if scrolled past threshold
+    const shouldShowAds = scrollY > showAfter;
+    
+    // Hide ads if footer is in view (with 100px buffer)
+    const footerInView = (scrollY + viewportHeight) >= (footerTop - 100);
+    const finalShowState = shouldShowAds && !footerInView;
+    
+    // Apply visibility with smooth transition
+    const adElements = [
+      document.getElementById('ad-side-left'),
+      document.getElementById('ad-side-right')
+    ];
+    
+    adElements.forEach(ad => {
+      if (ad) {
+        if (finalShowState) {
+          ad.style.display = 'flex';
+          ad.style.opacity = '1';
+          ad.style.transform = 'translateY(0)';
+        } else {
+          ad.style.opacity = '0';
+          ad.style.transform = 'translateY(20px)';
+          // Hide after transition
+          setTimeout(() => {
+            if (ad.style.opacity === '0') {
+              ad.style.display = 'none';
+            }
+          }, 300);
+        }
+      }
+    });
+  });
+}
+
+/**
+ * Create side banner ads if they don't exist
+ * Used for pages that don't have pre-defined ad containers
+ */
+function createSideBannerAds() {
+  // Only create on article pages or pages with main content
+  if (!document.querySelector('.article-body') && !document.querySelector('.main-content')) {
+    return;
+  }
+  
+  // Check if ads already exist
+  if (document.getElementById('ad-side-left') || document.getElementById('ad-side-right')) {
+    return;
+  }
+  
+  // Create left side ad
+  const leftAd = document.createElement('div');
+  leftAd.id = 'ad-side-left';
+  leftAd.className = 'ad-side-banner';
+  leftAd.style.display = 'none';
+  leftAd.innerHTML = `
+    <div class="ad-placeholder-content">
+      <div style="width: 160px; height: 600px; background: #f0f0f0; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; color: #666; font-size: 12px; text-align: center;">
+        Advertisement<br>160x600
+      </div>
+    </div>
+  `;
+  
+  // Create right side ad
+  const rightAd = document.createElement('div');
+  rightAd.id = 'ad-side-right';
+  rightAd.className = 'ad-side-banner';
+  rightAd.style.display = 'none';
+  rightAd.innerHTML = `
+    <div class="ad-placeholder-content">
+      <div style="width: 160px; height: 600px; background: #f0f0f0; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; color: #666; font-size: 12px; text-align: center;">
+        Advertisement<br>160x600
+      </div>
+    </div>
+  `;
+  
+  // Add to body
+  document.body.appendChild(leftAd);
+  document.body.appendChild(rightAd);
+  
+  // Load real ads from ad-scripts.html if available
+  loadSideBannerAdContent();
+}
+
+/**
+ * Load actual ad content for side banners
+ */
+function loadSideBannerAdContent() {
+  // Try to load ads from ad-scripts.html
+  fetch('./ads/ad-scripts.html')
+    .then(response => response.text())
+    .then(data => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+      
+      // Load left side ad
+      const leftAdContent = doc.getElementById('side-banner-left');
+      const leftAdContainer = document.getElementById('ad-side-left');
+      if (leftAdContent && leftAdContainer) {
+        const contentDiv = leftAdContainer.querySelector('.ad-placeholder-content');
+        if (contentDiv) {
+          contentDiv.innerHTML = leftAdContent.innerHTML;
+        }
+      }
+      
+      // Load right side ad
+      const rightAdContent = doc.getElementById('side-banner-right');
+      const rightAdContainer = document.getElementById('ad-side-right');
+      if (rightAdContent && rightAdContainer) {
+        const contentDiv = rightAdContainer.querySelector('.ad-placeholder-content');
+        if (contentDiv) {
+          contentDiv.innerHTML = rightAdContent.innerHTML;
+        }
+      }
+    })
+    .catch(error => {
+      _devMode.log('Could not load side banner ads: ' + error.message);
+      // Keep placeholder content
+    });
 }
 
 // Decoy functions to confuse reverse engineers

@@ -1,12 +1,12 @@
-# GitHub Pages Deployment Guide for TechTrend Digest
+# GitHub Pages Deployment Guide for TechShot
 
-This document provides step-by-step instructions for deploying the TechTrend Digest website to GitHub Pages.
+This document provides step-by-step instructions for deploying the TechShot website to GitHub Pages.
 
 ## Prerequisites
 
 1. A GitHub account
 2. Git installed on your local machine
-3. The TechTrend Digest codebase (this repository)
+3. The TechShot codebase (this repository)
 
 ## Deployment Steps
 
@@ -14,7 +14,7 @@ This document provides step-by-step instructions for deploying the TechTrend Dig
 
 1. Log in to your GitHub account
 2. Click the "+" button in the top-right corner and select "New repository"
-3. Name your repository (e.g., "techtrend-digest")
+3. Name your repository (e.g., "techshot")
 4. Add a description (optional)
 5. Keep the repository public (required for GitHub Pages with a free account)
 6. Click "Create repository"
@@ -25,7 +25,7 @@ From your local terminal/command prompt:
 
 ```bash
 # Navigate to your project directory
-cd path/to/TechTrend-Digest
+cd path/to/techshot
 
 # Initialize git repository (if not already done)
 git init
@@ -37,7 +37,7 @@ git add .
 git commit -m "Initial commit"
 
 # Add the remote repository
-git remote add origin https://github.com/YOUR-USERNAME/techtrend-digest.git
+git remote add origin https://github.com/YOUR-USERNAME/techshot.git
 
 # Push to GitHub
 git push -u origin main
@@ -52,7 +52,7 @@ git push -u origin main
 5. Click "Save"
 6. Wait a few minutes for your site to be published
 
-Your site will be available at: `https://YOUR-USERNAME.github.io/techtrend-digest/`
+Your site will be available at: `https://YOUR-USERNAME.github.io/techshot/`
 
 ### 4. Set Up a Custom Domain (Optional)
 

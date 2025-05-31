@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Template - TechShot</title>
+  <meta name="description" content="Template for new articles">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/images/favicon.ico">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Side Banner Ads -->
+  <div class="ad-side-banner" id="ad-side-left" style="display: none;">
+    <div class="ad-placeholder-content">
+      <div style="width: 160px; height: 600px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc;">
+        <span style="color: #999;">160x600 Side Ad</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="ad-side-banner" id="ad-side-right" style="display: none;">
+    <div class="ad-placeholder-content">
+      <div style="width: 160px; height: 600px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc;">
+        <span style="color: #999;">160x600 Side Ad</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Component Placeholder -->
+  <div id="header-placeholder" data-component="header"></div>
+  
+  <!-- Banner Ad -->
+  <div class="container">
+    <div class="ad-banner">
+      <p class="ad-text">Advertisement</p>
+      <!-- Include ad banner from ad-scripts.html -->
+      <script>
+        fetch('../ads/ad-scripts.html')
+          .then(response => response.text())
+          .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const bannerAd = doc.getElementById('banner-ad');
+            if (bannerAd) document.querySelector('.ad-banner').appendChild(bannerAd);
+          });
+      </script>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="container main-content">
+    <!-- Article Content -->
+    <article class="articles-section">
+      <header class="article-header">
+        <span class="article-category">Tech News</span>
+        <h1>Your Article Title Here</h1>
+        <div class="article-meta">
+          <span><i class="fas fa-user"></i> Author Name</span>
+          <span><i class="fas fa-calendar-alt"></i> May 31, 2025</span>
+          <span><i class="fas fa-clock"></i> 5 min read</span>
+        </div>
+      </header>
+      
+      <!-- Article featured image -->
+      <div class="article-featured-image">
+        <img src="https://placehold.co/800x400/cccccc/666666?text=Featured+Image" alt="Article featured image">
+        <div class="image-caption">
+          Your image caption here
+        </div>
+      </div>
+      
+      <!-- Article Body -->
+      <div class="article-body">
+        <p>Your article content goes here. This is a template that demonstrates how to use the component system.</p>
+        
+        <h2 id="section-1">Section 1 Heading</h2>
+        <p>Content for section 1...</p>
+        
+        <h3>Subsection 1.1</h3>
+        <p>Content for subsection...</p>
+        
+        <blockquote>
+          "This is a quote example that shows how blockquotes are styled."
+        </blockquote>
+        
+        <h2 id="section-2">Section 2 Heading</h2>
+        <p>Content for section 2...</p>
+        
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ul>
+        
+        <p>More content...</p>
+      </div>
+      
+      <!-- Share Buttons -->
+      <div class="share-buttons">
+        <a href="#" class="share-button"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="share-button"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="share-button"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="share-button"><i class="fab fa-reddit-alien"></i></a>
+        <a href="#" class="share-button"><i class="far fa-envelope"></i></a>
+      </div>
+      
+      <div class="author-bio">
+        <img src="https://placehold.co/150x150/cccccc/666666?text=Author" alt="Author Name" class="author-image">
+        <div class="author-info">
+          <h3>About the Author</h3>
+          <h4>Author Name</h4>
+          <p>Author bio goes here. Include background, expertise, and experience.</p>
+          <div class="author-social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Newsletter Signup -->
+      <div class="newsletter">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter to receive the latest tech news and updates straight to your inbox.</p>
+        <div id="mc_embed_signup">
+          <form action="#" method="post" class="newsletter-form" target="_blank" novalidate>
+            <input type="email" name="EMAIL" placeholder="Your email address">
+            <button type="submit" name="subscribe" class="btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Sidebar Ad -->
+      <div class="ad-sidebar">
+        <p class="ad-text">Advertisement</p>
+        <script>
+          fetch('../ads/ad-scripts.html')
+            .then(response => response.text())
+            .then(data => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(data, 'text/html');
+              const sidebarAd = doc.getElementById('sidebar-ad');
+              if (sidebarAd) document.querySelector('.ad-sidebar').appendChild(sidebarAd);
+            });
+        </script>
+      </div>
+      
+      <!-- Table of Contents -->
+      <div class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#section-1">Section 1 Heading</a></li>
+          <li><a href="#section-2">Section 2 Heading</a></li>
+        </ul>
+      </div>
+      
+      <!-- Tags -->
+      <div class="article-tags">
+        <h3>Tags</h3>
+        <div class="tags">
+          <a href="#" class="tag">Tag 1</a>
+          <a href="#" class="tag">Tag 2</a>
+          <a href="#" class="tag">Tag 3</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+  
+  <!-- Footer Component Placeholder -->
+  <div id="footer-placeholder" data-component="footer"></div>
+  
+  <!-- JavaScript -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/components.js"></script>
+  
+  <script>
+    // Show side ads after scrolling past the first screen
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var showAfter = window.innerHeight * 0.8;
+      var leftAd = document.getElementById('ad-side-left');
+      var rightAd = document.getElementById('ad-side-right');
+      var footer = document.querySelector('footer');
+      
+      if (scrollY > showAfter && footer) {
+        var footerRect = footer.getBoundingClientRect();
+        var isNearFooter = footerRect.top < window.innerHeight + 100;
+        
+        if (!isNearFooter) {
+          leftAd && (leftAd.style.display = 'block');
+          rightAd && (rightAd.style.display = 'block');
+        } else {
+          leftAd && (leftAd.style.display = 'none');
+          rightAd && (rightAd.style.display = 'none');
+        }
+      } else {
+        leftAd && (leftAd.style.display = 'none');
+        rightAd && (rightAd.style.display = 'none');
+      }
+    });
+  </script>
+</body>
+</html>

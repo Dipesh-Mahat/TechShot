@@ -1,0 +1,16 @@
+{  "name": "techshot",
+  "version": "1.0.0",
+  "description": "TechShot - Tech Blog with Markdown to HTML conversion",
+  "scripts": {
+    "build": "node scripts/build-articles.js",
+    "watch": "node scripts/build-articles.js --watch",
+    "dev": "npm run watch"
+  },
+  "devDependencies": {
+    "marked": "^12.0.0",
+    "front-matter": "^4.0.2",
+    "chokidar": "^3.5.3",
+    "fs-extra": "^11.2.0"
+  },
+  "dependencies": {}
+}

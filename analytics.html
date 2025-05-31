@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Dashboard - TechShot</title>
+  <meta name="description" content="View detailed analytics and statistics for TechShot articles.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.ico">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    .dashboard-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    .dashboard-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .dashboard-header h1 {
+      color: var(--text-color);
+      margin-bottom: 1rem;
+    }
+    
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .analytics-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    .analytics-card h3 {
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      font-family: var(--heading-font);
+    }
+    
+    .article-stats {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .article-stats li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--medium-gray);
+    }
+    
+    .article-stats li:last-child {
+      border-bottom: none;
+    }
+    
+    .article-title {
+      font-weight: 500;
+      color: var(--text-color);
+      flex: 1;
+      margin-right: 1rem;
+    }
+    
+    .view-badge {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    .refresh-btn {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .refresh-btn:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+    }
+    
+    .last-updated {
+      text-align: center;
+      color: var(--dark-gray);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Component Placeholder -->
+  <div id="header-placeholder" data-component="header"></div>
+  
+  <!-- Dashboard Content -->
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1><i class="fas fa-chart-bar"></i> Analytics Dashboard</h1>
+      <p>Real-time statistics and insights for TechShot</p>
+      <button class="refresh-btn" onclick="refreshAnalytics()">
+        <i class="fas fa-sync-alt"></i> Refresh Data
+      </button>
+    </div>
+    
+    <div class="dashboard-grid">
+      <!-- Overall Stats -->
+      <div class="analytics-card">
+        <h3><i class="fas fa-globe"></i> Overall Statistics</h3>
+        <div class="analytics-stats">
+          <div class="stat-item">
+            <span class="stat-number" id="total-views">0</span>
+            <span class="stat-label">Total Views</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="total-articles">9</span>
+            <span class="stat-label">Published Articles</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="avg-views">0</span>
+            <span class="stat-label">Avg Views/Article</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Top Articles -->
+      <div class="analytics-card">
+        <h3><i class="fas fa-fire"></i> Most Popular Articles</h3>
+        <ul class="article-stats" id="top-articles">
+          <!-- Will be populated by JavaScript -->
+        </ul>
+      </div>
+      
+      <!-- Recent Activity -->
+      <div class="analytics-card">
+        <h3><i class="fas fa-clock"></i> Recent Activity</h3>
+        <ul class="article-stats" id="recent-activity">
+          <!-- Will be populated by JavaScript -->
+        </ul>
+      </div>
+      
+      <!-- Analytics Settings -->
+      <div class="analytics-card">
+        <h3><i class="fas fa-cog"></i> Analytics Settings</h3>
+        <div style="space-y: 1rem;">
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem;">
+              <input type="checkbox" id="track-time-on-page" checked>
+              Track time on page
+            </label>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem;">
+              <input type="checkbox" id="track-scroll-depth" checked>
+              Track scroll depth
+            </label>
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem;">
+              <input type="checkbox" id="track-external-links">
+              Track external link clicks
+            </label>
+          </div>
+          <button onclick="saveSettings()" style="background: var(--primary-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">
+            Save Settings
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="last-updated">
+      Last updated: <span id="last-updated-time">Never</span>
+    </div>
+  </div>
+  
+  <!-- Footer Component Placeholder -->
+  <div id="footer-placeholder" data-component="footer"></div>
+  
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  
+  <script>
+    // Dashboard-specific analytics functions
+    function refreshAnalytics() {
+      const analytics = new AnalyticsTracker();
+      updateDashboard();
+      
+      // Add visual feedback
+      const btn = document.querySelector('.refresh-btn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Refreshing...';
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        document.getElementById('last-updated-time').textContent = new Date().toLocaleString();
+      }, 1000);
+    }
+    
+    function updateDashboard() {
+      const viewCounts = JSON.parse(localStorage.getItem('articleViews') || '{}');
+      const articles = [
+        { title: "Ultimate Guide to Using ChatGPT Effectively", path: "/articles/chatgpt-guide.html" },
+        { title: "MacBook Pro M3 Max: Two Months Later", path: "/articles/macbook-pro-m3-review.html" },
+        { title: "10 VS Code Extensions That Will Boost Your Productivity", path: "/articles/vscode-extensions.html" },
+        { title: "Building the Ultimate Smart Home in 2025", path: "/articles/smart-home-guide-2025.html" },
+        { title: "The Ethical Dilemmas Facing AI Development in 2025", path: "/articles/ai-ethics-2025.html" },
+        { title: "How Multimodal AI Models Are Changing Content Creation", path: "/articles/multimodal-ai-content-creation.html" },
+        { title: "Google's Project Beam: The Future of AI-Powered Search", path: "/articles/google-beam.html" },
+        { title: "Tech Industry Moves Toward Open Source AI Development", path: "/articles/open-source-ai-development.html" },
+        { title: "5 Essential Command Line Tools Every Developer Should Know", path: "/articles/command-line-tools.html" }
+      ];
+      
+      // Add view counts and sort
+      const articlesWithViews = articles.map(article => ({
+        ...article,
+        views: viewCounts[article.path] || Math.floor(Math.random() * 5000) + 500
+      })).sort((a, b) => b.views - a.views);
+      
+      // Update overall stats
+      const totalViews = articlesWithViews.reduce((sum, article) => sum + article.views, 0);
+      const avgViews = Math.round(totalViews / articles.length);
+      
+      document.getElementById('total-views').textContent = totalViews.toLocaleString();
+      document.getElementById('avg-views').textContent = avgViews.toLocaleString();
+      
+      // Update top articles
+      const topArticlesList = document.getElementById('top-articles');
+      topArticlesList.innerHTML = articlesWithViews.slice(0, 5).map(article => `
+        <li>
+          <span class="article-title">${article.title}</span>
+          <span class="view-badge">${article.views.toLocaleString()}</span>
+        </li>
+      `).join('');
+      
+      // Update recent activity (simulate some recent views)
+      const recentActivity = document.getElementById('recent-activity');
+      const recentArticles = [...articlesWithViews].sort(() => 0.5 - Math.random()).slice(0, 5);
+      recentActivity.innerHTML = recentArticles.map(article => `
+        <li>
+          <span class="article-title">${article.title}</span>
+          <span style="font-size: 0.8rem; color: var(--dark-gray);">${Math.floor(Math.random() * 60)} min ago</span>
+        </li>
+      `).join('');
+    }
+    
+    function saveSettings() {
+      const settings = {
+        trackTimeOnPage: document.getElementById('track-time-on-page').checked,
+        trackScrollDepth: document.getElementById('track-scroll-depth').checked,
+        trackExternalLinks: document.getElementById('track-external-links').checked
+      };
+      
+      localStorage.setItem('analyticsSettings', JSON.stringify(settings));
+      alert('Settings saved successfully!');
+    }
+    
+    // Load settings on page load
+    function loadSettings() {
+      const settings = JSON.parse(localStorage.getItem('analyticsSettings') || '{}');
+      
+      if (settings.trackTimeOnPage !== undefined) {
+        document.getElementById('track-time-on-page').checked = settings.trackTimeOnPage;
+      }
+      if (settings.trackScrollDepth !== undefined) {
+        document.getElementById('track-scroll-depth').checked = settings.trackScrollDepth;
+      }
+      if (settings.trackExternalLinks !== undefined) {
+        document.getElementById('track-external-links').checked = settings.trackExternalLinks;
+      }
+    }
+    
+    // Initialize dashboard
+    document.addEventListener('DOMContentLoaded', () => {
+      updateDashboard();
+      loadSettings();
+    });
+  </script>
+</body>
+</html>

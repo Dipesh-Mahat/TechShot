@@ -1,4 +1,4 @@
-# TechTrend Digest robots.txt
+# TechShot robots.txt
 # Allow most content to be indexed but restrict certain areas
 
 User-agent: *
@@ -12,4 +12,4 @@ Disallow: /ads/
 Disallow: /assets/js/
 
 # Sitemap location - update with your actual domain when deployed
-Sitemap: https://yourusername.github.io/techtrend-digest/sitemap.xml
+Sitemap: https://yourusername.github.io/techshot/sitemap.xml

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Beam: The Next Evolution in Search Technology - TechTrend Digest</title>
+  <title>Google Beam: The Next Evolution in Search Technology - TechShot</title>
   <meta name="description" content="Google's new AI-powered search experience aims to revolutionize how we find and interact with information online.">
   
   <!-- Favicon -->
@@ -43,12 +43,8 @@
     </div>
   </div>
   
-  <!-- Header -->
-  <header>
-    <div class="container header-container">
-      <div class="logo">
-        <a href="../index.html">
-          <h1>Tech<span>Trend</span> Digest</h1>
+  <!-- Header Component Placeholder -->
+  <div id="header-placeholder" data-component="header"></div>
         </a>
       </div>
       
@@ -259,7 +255,7 @@
           <div class="author-info">
             <h3>About the Author</h3>
             <h4>Mark Johnson</h4>
-            <p>Mark is a senior technology reporter at TechTrend Digest who covers search engines, AI, and the tech giants. He has been covering the technology industry for over a decade, with a focus on how digital platforms shape our access to information.</p>
+            <p>Mark is a senior technology reporter at TechShot who covers search engines, AI, and the tech giants. He has been covering the technology industry for over a decade, with a focus on how digital platforms shape our access to information.</p>
             <div class="author-social">
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -481,72 +477,18 @@
       </div>
     </aside>
   </div>
+    <!-- Footer Component Placeholder -->
+  <div id="footer-placeholder" data-component="footer"></div>
   
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>About TechTrend Digest</h3>
-          <p>Your source for the latest news and insights in technology, AI breakthroughs, gadget reviews, and software tips.</p>
-        </div>
-        
-        <div class="footer-column">          <h3>Categories</h3>
-          <ul>
-            <li><a href="../index.html#ai-breakthroughs">AI Breakthroughs</a></li>
-            <li><a href="../index.html#tech-news">Tech News</a></li>
-            <li><a href="../index.html#software-tips">Software Tips</a></li>
-            <li><a href="#">Tutorials</a></li>
-            <li><a href="#">Industry News</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="../about.html">About Us</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Advertise with Us</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-column">
-          <h3>Connect With Us</h3>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2025 TechTrend Digest. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  
-  <!-- Custom JavaScript -->
+  <!-- JavaScript -->
   <script src="../assets/js/main.js"></script>
-  <script>
-    // Show side ads after scrolling past the first screen
-    window.addEventListener('scroll', function() {
-      var scrollY = window.scrollY || window.pageYOffset;
-      var showAfter = window.innerHeight * 0.8;
-      var leftAd = document.getElementById('ad-side-left');
-      var rightAd = document.getElementById('ad-side-right');
-      if (scrollY > showAfter) {
-        leftAd && (leftAd.style.display = 'block');
-        rightAd && (rightAd.style.display = 'block');
-      } else {
-        leftAd && (leftAd.style.display = 'none');
-        rightAd && (rightAd.style.display = 'none');
-      }
-    });
-  </script>
+  <script src="../assets/js/components.js"></script>
+  
+  <!-- Search Overlay -->
+  <div id="search-overlay" class="search-overlay hidden"></div>
+  
+  <!-- JavaScript -->
+  <script src="../assets/js/search.js"></script>
 </body>
 </html>
+

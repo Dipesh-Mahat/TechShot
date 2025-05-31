@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Test - TechShot</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align: center; margin: 2rem 0;">TechShot Search Test</h1>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search articles... (try: ChatGPT, AI, MacBook, VS Code)">
+      <button>
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+    
+    <div style="text-align: center; margin: 2rem 0; color: #666;">
+      <p><strong>Try searching for:</strong></p>
+      <p>• "ChatGPT" - for AI articles</p>
+      <p>• "MacBook" - for Apple reviews</p>
+      <p>• "productivity" - for development tools</p>
+      <p>• "ai ethics" - for AI responsibility articles</p>
+      <p>• "smart home" - for IoT content</p>
+    </div>
+  </div>
+  
+  <!-- Search Overlay -->
+  <div id="search-overlay" class="search-overlay hidden"></div>
+  
+  <!-- JavaScript -->
+  <script src="assets/js/search.js"></script>
+</body>
+</html>

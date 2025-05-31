@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://yourusername.github.io/techtrend-digest/</loc>
+    <loc>https://yourusername.github.io/techshot/</loc>
     <lastmod>2025-05-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -10,13 +10,13 @@
   
   <!-- Articles -->
   <url>
-    <loc>https://yourusername.github.io/techtrend-digest/articles/chatgpt-guide.html</loc>
+    <loc>https://yourusername.github.io/techshot/articles/chatgpt-guide.html</loc>
     <lastmod>2025-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourusername.github.io/techtrend-digest/articles/google-beam.html</loc>
+    <loc>https://yourusername.github.io/techshot/articles/google-beam.html</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -24,19 +24,19 @@
   
   <!-- Category Pages -->
   <url>
-    <loc>https://yourusername.github.io/techtrend-digest/#ai-breakthroughs</loc>
+    <loc>https://yourusername.github.io/techshot/#ai-breakthroughs</loc>
     <lastmod>2025-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yourusername.github.io/techtrend-digest/#tech-news</loc>
+    <loc>https://yourusername.github.io/techshot/#tech-news</loc>
     <lastmod>2025-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yourusername.github.io/techtrend-digest/#software-tips</loc>
+    <loc>https://yourusername.github.io/techshot/#software-tips</loc>
     <lastmod>2025-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -44,13 +44,13 @@
   
   <!-- Other Pages -->
   <url>
-    <loc>https://yourusername.github.io/techtrend-digest/about.html</loc>
+    <loc>https://yourusername.github.io/techshot/about.html</loc>
     <lastmod>2025-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yourusername.github.io/techtrend-digest/contact.html</loc>
+    <loc>https://yourusername.github.io/techshot/contact.html</loc>
     <lastmod>2025-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

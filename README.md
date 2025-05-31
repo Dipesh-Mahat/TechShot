@@ -1,4 +1,4 @@
-# TechTrend Digest
+# TechShot
 
 A modern, professional tech blog website focused on AI and tech news, created by Dipesh Mahat with AI assistance.
 
@@ -23,7 +23,7 @@ A modern, professional tech blog website focused on AI and tech news, created by
 ## Directory Structure
 
 ```
-techtrend-digest/
+techshot/
 ├── index.html                # Homepage with latest articles
 ├── about.html                # About page with team information
 ├── contact.html              # Contact form for reader inquiries
@@ -95,4 +95,4 @@ This site is maintained by Dipesh Mahat with assistance from AI tools. It's desi
 
 This project is proprietary and not intended for redistribution or modification without permission. The code structure includes intentional complexity to prevent unauthorized copying.
 
-© 2025 TechTrend Digest - All Rights Reserved
+© 2025 TechShot - All Rights Reserved
